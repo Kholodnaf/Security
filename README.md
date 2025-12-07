@@ -23,7 +23,7 @@ If the database exposes unhashed passwords or weak storage, it indicates a secur
 
 3. Cross-Site Scripting (XSS)
 In the Dashboard’s comment section, enter: <script>alert('You have been hacked!')</script>
-If an alert pops up in the browser, then XSS protection is missing.
+. If an alert pops up in the browser, then XSS protection is missing.
 
 4. Access Control Test
 As a regular (non-admin) user, try accessing: "/admin"
