@@ -42,7 +42,8 @@ If you can open the admin panel without permission, access control is not enforc
 5. Insecure Communication Test
 Check whether the website is using HTTPS.
 Look for the padlock icon next to the URL in the browser.
-If no lock is shown, the connection is not encrypte
+If no lock is shown, the connection is not encrypted.
+
 
 
 
