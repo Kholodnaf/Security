@@ -1,16 +1,14 @@
 # Security
-#Overview
+# Overview
 
-#Steps to run the application (Windows)
+# Steps to run the application (Windows)
 1. python -m venv venv
 2. venv\Scripts\activate
 3. pip install flask flask-sqlalchemy bcrypt
 4. python app.py
 
 
-#How to Test Security Features:
-How to Test Security Features
-
+# How to Test Security Features:
 1. SQL Injection Test
 Attempt to log in using the following credentials:
 
