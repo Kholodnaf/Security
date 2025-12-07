@@ -13,19 +13,16 @@ This document explains how to run the SecureApp application on Windows and how t
 1. SQL Injection Test
 Attempt to log in using the following credentials:
 Username: ' OR 1=1 --
-Password: any value (example: 1)
-
-If the system is vulnerable, it will allow you to log in without valid credentials.
+Password: any value (example: 1). If the system is vulnerable, it will allow you to log in without valid credentials.
 
 2. Weak Password Storage Test
 Check whether passwords are stored in plain text.
 Run the following command in the terminal to inspect the user table:
-python -c "import sqlite3; conn = sqlite3.connect('instance/database.db'); cursor = conn.cursor(); cursor.execute('SELECT id, username, password, role FROM user'); rows = cursor.fetchall(); [print(f'ID: {r[0]} | Username: {r[1]} | Password: {r[2]} | Role: {r[3]}') for r in rows]; conn.close()"
+python -c "import sqlite3; conn = sqlite3.connect('instance/database.db'); cursor = conn.cursor(); cursor.execute('SELECT id, username, password, role FROM user'); rows = cursor.fetchall(); [print(f'ID: {r[0]} | Username: {r[1]} | Password: {r[2]} | Role: {r[3]}') for r in rows]; conn.close()".
 If the database exposes unhashed passwords or weak storage, it indicates a security flaw.
 
 3. Cross-Site Scripting (XSS)
-In the Dashboard’s comment section, enter:
-<script>alert('You have been hacked!')</script>
+In the Dashboard’s comment section, enter: <script>alert('You have been hacked!')</script>
 If an alert pops up in the browser, then XSS protection is missing.
 
 4. Access Control Test
