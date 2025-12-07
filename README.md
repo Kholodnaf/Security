@@ -21,7 +21,7 @@ If the system is vulnerable, it will allow you to log in without valid credentia
 Check whether passwords are stored in plain text.
 Run the following command in the terminal to inspect the user table:
 
-python -c "import sqlite3; conn = sqlite3.connect('instance/database.db'); cursor = conn.cursor(); cursor.execute('SELECT id, username, role FROM user'); rows = cursor.fetchall(); [print(f'ID: {r[0]} | Username: {r[1]} | Role: {r[2]}') for r in rows]; conn.close()"
+python -c "import sqlite3; conn = sqlite3.connect('instance/database.db'); cursor = conn.cursor(); cursor.execute('SELECT id, username, password, role FROM user'); rows = cursor.fetchall(); [print(f'ID: {r[0]} | Username: {r[1]} | Password: {r[2]} | Role: {r[3]}') for r in rows]; conn.close()"
 
 If the database exposes unhashed passwords or weak storage, it indicates a security flaw.
 
