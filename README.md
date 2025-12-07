@@ -1,6 +1,16 @@
 # SecureApp
 # Overview
-This document explains how to run the SecureApp application on Windows and how to test common security vulnerabilities for demonstration and educational purposes.
+# The application includes the following features:
+- User registration and authentication
+- A user dashboard with the ability to post comments
+- An admin dashboard protected by access control
+  
+The project focuses on demonstrating five key security vulnerabilities:
+  - SQL Injection
+  - Weak password storage
+  - Cross-Site Scripting (XSS)
+  - Broken access control
+  - Insecure communication (absence of HTTPS)
 
 # Steps to run the application (Windows)
 1. python -m venv venv
